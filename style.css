@@ -1,0 +1,111 @@
+body {
+  background-color: #0e0e0f;
+  font-family: "VT323", monospace;
+  font-size: 40px;
+  display: flex;
+}
+
+.calc {
+  border: #c5c5c5 3px solid;
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+}
+
+.screen {
+  border: #c5c5c5 2px solid;
+  padding: 10px 40px;
+  flex: 2;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.btn {
+  border: #c5c5c5 1px solid;
+  color: #c5c5c5;
+  padding: 10px;
+  flex: 1;
+  aspect-ratio: 1/1;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: #c5c5c5;
+  color: #0e0e0f;
+}
+
+.btn:active {
+  background-color: #ffffff;
+  color: #0e0e0f;
+  transition: 0.1s;
+}
+
+.operation {
+  color: lightblue;
+}
+.operation:hover {
+  background-color: lightblue;
+  opacity: 0.8;
+  color: #0e0e0f;
+}
+.operation:active {
+  opacity: 1;
+}
+
+.clear {
+  color: red;
+}
+.clear:hover {
+  opacity: 0.8;
+  background-color: red;
+  color: #0e0e0f;
+}
+.clear:active {
+  opacity: 1;
+}
+
+.equal {
+  color: orange;
+}
+.equal:hover {
+  background-color: orange;
+  opacity: 0.8;
+  color: #0e0e0f;
+}
+.equal:active {
+  opacity: 1;
+}
+
+.modifier {
+  color: lightgreen;
+}
+.modifier:hover {
+  background-color: lightgreen;
+  opacity: 0.8;
+  color: #0e0e0f;
+}
+.modifier:active {
+  opacity: 1;
+}
