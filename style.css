@@ -20,7 +20,7 @@ body {
 
 .screen {
   border: #c5c5c5 2px solid;
-
+  padding: 10px;
   flex: 2;
   margin-bottom: 10px;
   font-size: 30px;
@@ -29,10 +29,6 @@ body {
   justify-content: space-between;
   align-items: end;
   gap: 10px;
-}
-
-.screen div {
-  border: red solid 1px;
 }
 
 .screen #inputA {
@@ -45,7 +41,7 @@ body {
 .screen #inputB {
   flex: 1;
   font-family: "VT323", monospace;
-  font-size: 20px;
+  font-size: 30px;
   color: #c5c5c5;
 }
 .buttons {

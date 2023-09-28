@@ -15,22 +15,25 @@ buttons.forEach((button) =>
       screen.textContent == "" ? zeroBuffer() : zeroScreen();
     }
     if (button.className.includes("num")) {
-      (screenText.length < 14) ? 
-      (screenText.push(button.id)),
-      (updateScreen())
+      if (screenText.length < 15) {
+        screenText.push(button.id);
+        updateScreen();
+      }
     }
     if (button.className.includes("operator")) {
-      bufferText = screenText;
+      bufferText.push(screenText.join(""));
+      bufferText.push(button.id);
       updateBuffer();
       zeroScreen();
     }
     if (button.id == "equal") {
+      equal();
     }
   })
 );
 
 const add = function (x, y) {
-  return x + y;
+  return Number(x) + Number(y);
 };
 const subtract = function (x, y) {
   return x - y;
@@ -41,11 +44,37 @@ const multiply = function (x, y) {
 const divide = function (x, y) {
   return x / y;
 };
-const equal = function () {};
+const equal = function () {
+  bufferText.push(screenText.join(""));
+  updateBuffer();
+  zeroScreen();
+  switch (bufferText[1]) {
+    case "+":
+      screenText.push(add(bufferText[0], bufferText[2]));
+      console.log(screenText);
+      updateScreen();
+      break;
+    case "-":
+      screenText.push(subtract(bufferText[0], bufferText[2]));
+      console.log(screenText);
+      updateScreen();
+      break;
+    case "/":
+      screenText.push(divide(bufferText[0], bufferText[2]));
+      console.log(screenText);
+      updateScreen();
+      break;
+    case "x":
+      screenText.push(multiply(bufferText[0], bufferText[2]));
+      console.log(screenText);
+      updateScreen();
+      break;
+  }
+};
 
 // UPDATE FUNCTIONS
 const updateBuffer = function () {
-  buffer.textContent = bufferText.join("");
+  buffer.textContent = bufferText.join(" ");
 };
 const updateScreen = function () {
   screen.textContent = screenText.join("");
@@ -82,4 +111,5 @@ const zeroBuffer = function () {
 //
 
 // BONUS
-//
+// Cheat Codes for Gabi
+// divide 1 by 21 alerts "Happy Birthday!"
