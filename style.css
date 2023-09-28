@@ -24,12 +24,31 @@ body {
   flex: 2;
   margin-bottom: 10px;
   font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  gap: 10px;
 }
 
+.screen #inputA {
+  flex: 2;
+  font-family: "VT323", monospace;
+  font-size: 40px;
+  color: #c5c5c5;
+}
+
+.screen #inputB {
+  flex: 1;
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  color: #c5c5c5;
+}
 .buttons {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  border: #c5c5c5 1px solid;
 }
 
 .row {
@@ -40,6 +59,9 @@ body {
 }
 
 .btn {
+  background-color: #0e0e0f;
+  font-family: "VT323", monospace;
+  font-size: 40px;
   border: #c5c5c5 1px solid;
   color: #c5c5c5;
   padding: 10px;
